@@ -1,0 +1,31 @@
+package com.onlinepantry.domain;
+
+import java.io.Serializable;
+
+import javax.persistence.Embeddable;
+import javax.persistence.ManyToOne;
+
+@Embeddable
+public class GroceryIngredients implements Serializable {
+
+	private static final long serialVersionUID = 205390980711997786L;
+	private User user;
+	private Recipe recipe;
+
+	@ManyToOne
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	@ManyToOne
+	public Recipe getRecipe() {
+		return recipe;
+	}
+	public void setRecipe(Recipe recipe) {
+		this.recipe = recipe;
+	}
+
+}
