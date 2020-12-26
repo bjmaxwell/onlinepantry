@@ -1,0 +1,29 @@
+package com.onlinepantry.domain;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+
+@Entity
+
+public class Grocery {
+
+	private GroceryIngredients pk;
+	private Boolean upgrocery;
+
+	public Boolean getUpgrocery() {
+		return upgrocery;
+	}
+
+	public void setUpgrocery(Boolean upgrocery) {
+		this.upgrocery = upgrocery;
+	}
+
+	@EmbeddedId	
+	public GroceryIngredients getPk() {
+		return pk;
+	}
+	public void setPk(GroceryIngredients pk) {
+		this.pk = pk;
+	}
+
+}
